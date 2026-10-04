@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة الرشد للقدرات والتحصيلي | مستر أحمد عيسى</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d47a1;
+            --primary-dark: #002171;
+            --accent: #ff9800;
+            --accent-hover: #f57c00;
+            --danger: #e53935;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --whatsapp: #25d366;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* شريط التنبيه بالخصومات أعلى الموقع */
+        .promo-bar {
+            background: linear-gradient(90deg, #d32f2f, #f57c00);
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* شريط الهيدر */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 0.8rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .platform-logo-img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        /* واجهة التعريف (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #0d47a1 0%, #002171 100%);
+            color: #fff;
+            padding: 3.5rem 5% 4.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-profile {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin: 0 auto 1.2rem auto;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        }
+
+        .hero-profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: #ffb74d;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 850px;
+            margin: 0 auto 1.8rem auto;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .banner-highlight {
+            background: rgba(255, 152, 0, 0.2);
+            border: 1px dashed var(--accent);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        /* حاوية الأقسام */
+        .container {
+            max-width: 1100px;
+            margin: -2.5rem auto 3rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* قسم الدورة المكثفة والمحوسب المطوّر */
+        .intensive-course-banner {
+            background: #fff;
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--card-shadow);
+            border-top: 6px solid var(--accent);
+            border-bottom: 2px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .discount-tag {
+            position: absolute;
+            top: 20px;
+            left: -35px;
+            background: var(--danger);
+            color: #fff;
+            padding: 6px 40px;
+            transform: rotate(-45deg);
+            font-weight: 800;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .intensive-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .intensive-badge {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .intensive-header h2 {
+            color: var(--primary);
+            font-size: 1.7rem;
+            font-weight: 800;
+        }
+
+        .intensive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .intensive-feature-box {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 1.2rem;
+            border-right: 4px solid var(--primary);
+        }
+
+        .intensive-feature-box h4 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .intensive-feature-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .offer-callout {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #b78103;
+            font-weight: 700;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        /* البطاقات */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+            color: #475569;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* مميزات المنصة */
+        .platform-features {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 3.5rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-item {
+            background: var(--bg-light);
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* الأزرار */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-align: center;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: #fff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: #fff;
+            width: auto;
+            min-width: 250px;
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* الفوتر */
+        footer {
+            background: var(--primary-dark);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* زر واتساب عائم */
+        .floating-wa {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: var(--whatsapp);
+            color: #fff;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-decoration: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط الخصومات العلوي -->
+    <div class="promo-bar">
+        🔥 عروض وخصومات خاصة بمناسبة فتح باب التسجيل للفترة القادمة لفترة محدودة!
+    </div>
+
+    <!-- الهيدر متضمناً أيقونة لوجو الرشد -->
+    <header>
+        <div class="logo-box">
+            <img src="https://i.postimg.cc/4d39mfmv/file-000000008d3881f4ad80fd221da924cb.png" alt="لوجو منصة الرشد" class="platform-logo-img">
+            <div class="brand-name">منصة الرشد للقدرات والتحصيلي</div>
+        </div>
+    </header>
+
+    <!-- واجهة التعريف بالمستر -->
+    <section class="hero">
+        <div class="hero-profile">
+            <img src="https://i.postimg.cc/L4GpXmX6/1781786651013.png" alt="مستر أحمد عيسى">
+        </div>
+        <h1>مستر أحمد عيسى</h1>
+        <div class="subtitle">مدرب قدرات وتحصيلي رياضيات | مسؤول منصة الرشد للقدرات</div>
+        
+        <div class="hero-badges">
+            <span class="badge">خبرة 5 سنوات في العمل عن بعد بمجال القدرات</span>
+            <span class="badge">مدرب معتمد لأبناء الجالية المصرية (أبناؤنا بالخارج)</span>
+            <span class="badge">مدرب لدى منصة فهيم التعليمية</span>
+        </div>
+
+        <div class="banner-highlight">
+            "ما فيش فرق بين الحضوري والأونلاين مع منصة الرشد"
+        </div>
+    </section>
+
+    <!-- المحتوى والبطاقات -->
+    <main class="container">
+
+        <!-- القسم المحدث: الدورة المكثفة والمحوسب والملفات الأكثر تكراراً والخصومات -->
+        <section class="intensive-course-banner">
+            <div class="discount-tag">خصم خاص</div>
+            <div class="intensive-header">
+                <span class="intensive-badge">برنامج الإنقاذ السريع</span>
+                <h2>الدورة المكثفة لاختبار المحوسب (20 حصة)</h2>
+                <p style="color: var(--text-muted); max-width: 780px; margin: 10px auto 0;">
+                    خطة محكمة ومكثفة تركز على تدريب الطالب على أسئلة ونماذج <strong>المحوسب الحديثة</strong> والانتهاء التام من <strong>الملفات الأكثر تكراراً</strong> لضمان تحقيق أعلى نسبة قبل دخول الاختبار.
+                </p>
+            </div>
+
+            <!-- تفاصيل ومميزات المحوسب والمكثف -->
+            <div class="intensive-grid">
+                <div class="intensive-feature-box">
+                    <h4>🎯 تقفيل الأكثر تكراراً</h4>
+                    <p>شرح وحل أدق نماذج والملفات المتكررة بصيغها الأصلية مع تدريب مستمر على التكرارات القياسية.</p>
+                </div>
+                <div class="intensive-feature-box">
+                    <h4>⏱️ استراتيجيات الحل الذكي</h4>
+                    <p>تعلم مهارات الحل السريع، التخمين المنطقي، واستبعاد الخيارات لتوفير وقت المحوسب الحرج.</p>
+                </div>
+                <div class="intensive-feature-box">
+                    <h4>💻 محاكاة شاشة المحوسب</h4>
+                    <p>اختبارات إلكترونية بنفس توقيت وطريقة شاشة الاختبار الفعلي لكسر حاجز الخوف والتوتر.</p>
+                </div>
+                <div class="intensive-feature-box">
+                    <h4>🚀 جاهزية خلال 20 حصة</h4>
+                    <p>برنامج مدروس خطوة بخطوة يختصر عليك التشتت ويجعلك في قمة مستواك واستعدادك للاختبار.</p>
+                </div>
+            </div>
+
+            <!-- تنبيه الخصم والحجز -->
+            <div class="offer-callout">
+                🎉 متاح الآن خصم إضافي للمجموعات والتسجيل المبكر لفترة محدودة!
+            </div>
+
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://wa.me/message/XJ4HVHKCVIZOA1" target="_blank" class="btn btn-accent">
+                    احجز مقعدك في الدورة المكثفة واستفد من الخصم
+                </a>
+            </div>
+        </section>
+
+        <!-- مسارات التسجيل والحجز العادية -->
+        <h2 class="section-title">اختر مسار التعلم الأنسب لك</h2>
+        <div class="plans-grid">
+            <!-- دورة برايفيت -->
+            <div class="card">
+                <div>
+                    <h3>دورة برايفيت (فردي)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">حصة خاصة ومتابعة شخصية مباشرة لمعالجة الثغرات والتركيز التام على نقاط ضعف الطالب.</p>
+                    <ul class="features-list">
+                        <li>حصص مباشرة وتفاعلية فردية عبر Zoom</li>
+                        <li>خطة عمل وجدول مخصص وفق مستوى واحتياج الطالب</li>
+                        <li>فيديوهات مسجلة لكل جزء للرجوع إليها في أي وقت</li>
+                        <li>اختبارات إلكترونية ومتابعة دورية مستمرة</li>
+                        <li><strong>خصم متاح عند حجز باقة الحصص كاملة</strong></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="https://wa.me/message/XJ4HVHKCVIZOA1" target="_blank" class="btn btn-whatsapp">
+                        تواصل معنا لحجز دورة برايفيت
+                    </a>
+                </div>
+            </div>
+
+            <!-- نظام المجموعات -->
+            <div class="card">
+                <div>
+                    <h3>نظام المجموعات والتفاعل</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">بيئة تفاعلية مميزة للمنافسة وحل المسائل بأسهل الطرق والتدريب الجماعي النشط.</p>
+                    <ul class="features-list">
+                        <li>حصص مباشرة تفاعلية عبر تطبيق Zoom</li>
+                        <li>بيئة تشاركية وتنافسية لحل التجميعات الحديثة</li>
+                        <li>فيديوهات مسجلة لشرح كل جزء بالتفصيل</li>
+                        <li>اختبارات إلكترونية دورية بعد كل محاضرة</li>
+                        <li><strong>خصومات خاصة للتسجيل الجماعي والأصدقاء</strong></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="https://wa.me/message/XJ4HVHKCVIZOA1" target="_blank" class="btn btn-whatsapp">
+                        الاشتراك في مجموعة
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- طبيعة الحصص والمميزات -->
+        <section class="platform-features">
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">طبيعة الحصص ونظام المنصة</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">أحدث الوسائل الرقمية التفاعلية لضمان تحقيق أعلى نسبة فهم وتفوق</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>حصص تفاعلية Zoom</h4>
+                    <p>بث مباشر عالي الجودة مع سبورة إلكترونية تتيح للطالب التفاعل وطرح الأسئلة لحظياً.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>فيديوهات مسجلة</h4>
+                    <p>تسجيل كل جزء من أجزاء المنهج لتتمكن من مراجعته في أي وقت ومن أي جهاز.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>اختبارات إلكترونية</h4>
+                    <p>اختبار إلكتروني يختص بكل جزء مشروح للوقوف الفوري على مستوى الفهم والاستيعاب.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>مراجعات شاملة</h4>
+                    <p>حل النماذج المطابقة للاختبار النهائي والتدريب على استراتيجيات الحل السريع والذكي.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/message/XJ4HVHKCVIZOA1" target="_blank" class="floating-wa" title="راسلنا على واتساب">✆</a>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة © منصة الرشد للقدرات - مستر أحمد عيسى</p>
+    </footer>
+
+</body>
+                  </html>
+                  
